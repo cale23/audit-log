@@ -1,32 +1,120 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  /* fix try for Firefox, no luck... */
+  // scrollbar-width: thin;
+  // scrollbar-color: #cfcfcf #f4f4f4;
 }
 
-#nav {
-  padding: 30px;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+// Font Variables
+$open-sans: "Open Sans", sans-serif;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+#app {
+  font-family: $open-sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: #00a88d;
+  }
+}
+p {
+  font-size: 14px;
+}
+textarea:focus,
+input:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+input,
+textarea,
+select {
+  &:hover {
+    cursor: pointer;
+  }
+}
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+.container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  height: 100vh;
+}
+.content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar {
+  order: -1;
+  flex: 0 0 250px;
+}
+.reset {
+  content: "";
+  position: absolute;
+  background: url("./assets/images/iconclose.svg") no-repeat center center;
+  top: 8px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  &:hover {
+    cursor: pointer;
+    filter: invert(52%) sepia(90%) saturate(2951%) hue-rotate(137deg)
+      brightness(94%) contrast(104%);
+  }
+}
+.disabled {
+  pointer-events: none;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #cfcfcf;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
   }
 }
 </style>
