@@ -64,6 +64,13 @@ select {
   /* for Chrome */
   -webkit-appearance: none;
 }
+input {
+  color: #3e4543;
+}
+::placeholder {
+  color: #9b9b9b;
+}
+
 .container {
   display: flex;
   flex: 1 1 auto;

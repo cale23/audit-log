@@ -52,7 +52,6 @@ export default {
     background-color: #ffffff;
     border-radius: 4px;
     height: 38px;
-    color: #9b9b9b;
     width: 267px;
     font-size: 14px;
     line-height: 18px;
