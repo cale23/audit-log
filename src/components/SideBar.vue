@@ -1,16 +1,18 @@
 <template>
   <div class="sidebar">
-    <router-link to="/" exact
-      ><img src="../assets/images/logo.png" class="logo" alt="Home"
-    /></router-link>
-    <div
-      class="hamburger"
-      :class="{ change: show }"
-      @click.prevent="toggleSidebar"
-    >
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+    <div class="sidebar-2-header" :class="{ show: show }">
+      <router-link to="/" exact
+        ><img src="../assets/images/logo.png" class="logo" alt="Home"
+      /></router-link>
+      <div
+        class="hamburger"
+        :class="{ change: show }"
+        @click.prevent="toggleSidebar"
+      >
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </div>
     <ul class="side-nav" :class="{ show: show }">
       <SideNavItem
@@ -62,7 +64,7 @@ export default {
 .side-nav {
   list-style-type: none;
   padding-left: 0;
-  margin-top: 47px;
+  margin-top: 32px;
   font-weight: bold;
   transition: 0.1s;
 }
@@ -70,15 +72,15 @@ export default {
   font-size: 14px;
   line-height: 18px;
   text-align: left;
-  padding: 0 27px;
+  padding: 15px 27px;
   position: relative;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   a {
     text-transform: capitalize;
     &:before {
       content: "";
       position: absolute;
-      top: 0;
+      top: 15px;
       left: 0;
       width: 15px;
       height: 18px;
@@ -128,26 +130,40 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .sidebar {
     flex: 0;
+    padding: 0;
+  }
+  .sidebar-2-header {
+    width: 100%;
+    height: 64px;
+    padding: 20px;
+    &.show {
+      border-bottom: 1px solid #cfcfcf;
+    }
+  }
+  .logo {
+    display: inline-block;
   }
   .side-nav {
-    margin: 30px 0 20px;
+    display: none;
+    padding: 0 20px;
+    margin: 0 0 10px;
+    div:not(:last-child) {
+      li {
+        border-bottom: 1px solid #cfcfcf;
+      }
+    }
     .side-nav-item {
       a {
-        display: inline-block;
         position: relative;
         &:before {
+          top: 0;
           left: -25px;
         }
       }
     }
-  }
-}
-@media (max-width: 480px) {
-  .side-nav {
-    display: none;
     &.show {
       display: block;
     }

@@ -6,13 +6,13 @@
       :class="{ open: open }"
     >
       <div class="user-toggle">
-        <span>{{ "John Doe" | initials }}</span>
+        <span>{{ "Mike Andrew" | initials }}</span>
       </div>
     </div>
     <div v-show="open" class="user-settings-dropdown">
       <div class="user-info">
         <div class="user-type">{{ userType | uppercase }}</div>
-        <div class="user-email">john.doe@jatheon.com</div>
+        <div class="user-email">mike.andrew@jatheon.com</div>
         <div class="user-company">Jatheon Technologies</div>
       </div>
       <div class="user-settings">
@@ -69,7 +69,7 @@ export default {
     width: 32px;
     height: 32px;
     font-size: 12px;
-    line-height: 28px;
+    line-height: 32px;
     text-align: center;
     color: #9b9b9b;
     font-weight: bold;

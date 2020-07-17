@@ -85,7 +85,7 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .search-filter {
     max-width: none;
     display: flex;

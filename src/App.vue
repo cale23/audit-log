@@ -105,7 +105,7 @@ select {
 ::-webkit-scrollbar-track {
   background: #f4f4f4;
   border-radius: 5px;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #cfcfcf;
@@ -115,6 +115,14 @@ select {
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    height: 100%;
+  }
+  .content {
+    height: 100vh;
   }
 }
 </style>

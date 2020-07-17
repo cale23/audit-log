@@ -69,7 +69,7 @@ export default {
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .main-header {
     .top {
       .search-bar {

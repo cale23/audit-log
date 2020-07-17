@@ -267,7 +267,7 @@ export default {
   .search-select-content {
     position: absolute;
     width: 267px;
-    padding: 12px 8px 0 12px;
+    padding: 12px 12px 0;
     background-color: #ffffff;
     border: 1px solid #cfcfcf;
     border-radius: 4px;
@@ -275,7 +275,6 @@ export default {
     z-index: 1;
     .search-bar {
       margin-bottom: 15px;
-      padding-right: 5px;
       width: 100%;
     }
   }
@@ -284,8 +283,9 @@ export default {
     height: 317px;
     overflow-y: scroll;
     overflow-x: hidden;
+    height: 264px;
+    margin: 0 -5px 0 0;
     &.searchable {
-      height: 264px;
     }
     .search-tag-holder {
       position: relative;
@@ -355,7 +355,7 @@ export default {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .search-select-wrapper {
     max-width: none;
   }

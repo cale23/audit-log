@@ -49,7 +49,7 @@ export default {
     font-size: 14px;
     line-height: 18px;
     text-align: left;
-    padding: 10px 20px 10px 35px;
+    padding: 10px 35px 10px;
     border: none;
     width: 100%;
   }
