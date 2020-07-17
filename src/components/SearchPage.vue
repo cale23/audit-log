@@ -32,7 +32,7 @@ export default {
   height: 100%;
 }
 .no-results {
-  width: 300px;
+  width: 320px;
   position: absolute;
   text-align: center;
   top: 50%;
